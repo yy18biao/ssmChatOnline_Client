@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+<div class="main">
+    <!-- logo层 -->
+    <div class="logo">chatOnline</div>
+
+    <!-- 选择层 -->
+    <div class="tab" id="tab">
+        <div class="login-pass" id="login-pass">账户密码登录</div>
+        <div class="login-phone" id="login-phone">手机登录</div>
+    </div>
+
+    <!-- 账号密码登录层 默认 -->
+    <div class="pass-input" id="pass-input">
+        <input type="text" class="username" id="username" placeholder="账号">
+        <input type="password" class="password" id="passsword" placeholder="密码">
+        <button class="forgetpass">忘记密码?</button>
+        <button class="login-button" onclick="login()">登录</button>
+        <button class="reg-button" onclick="reg()">注册账户</button>
+    </div>
+
+    <!-- 手机登录层 -->
+    <div class="phone-input" id="phone-input">
+        <input type="text" class="phone" id="phone" placeholder="手机号码">
+        <div class="verification">
+            <input type="text" class="verification-input" id="verification-input" placeholder="验证码">
+            <button class="verification-button" onclick="getLoginEmailCode()">获取验证码</button>
+        </div>
+        <button class="forgetpass">忘记密码?</button>
+        <button class="login-button" onclick="login()">登录</button>
+        <button class="reg-button" onclick="reg()">注册账户</button>
+    </div>
+
+    <!-- 尾段功能层 -->
+    <div class="end">
+        <button class="help">帮助</button>
+        <button class="privacy">隐私</button>
+        <button class="clause">条款</button>
+        <div class="end-text">jingbiao©2024</div>
+    </div>
+</div>
+
+<!-- 引入js -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/login.js"></script>
+</body>
+</html>

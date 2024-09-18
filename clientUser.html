@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/clientUser.css">
+</head>
+<body>
+<div class="main">
+    <!-- 左侧框 -->
+    <div class="left">
+        <!-- 头像 -->
+        <div class="head"></div>
+
+        <!-- 选择功能标签列表 -->
+        <ul class="tab-list">
+            <!-- 会话 -->
+            <li><img src="./img/session-select.png"></li>
+            <li style="display: none;"><img src="./img/session.png"></li>
+
+            <!-- 好友 -->
+            <li style="display: none;"><img src="./img/friend-select.png"></li>
+            <li><img src="./img/friend.png"></li>
+
+            <!-- 邮箱 -->
+            <li><img src="./img/email.png"></li>
+
+            <!-- 设置 -->
+            <li style="display: none;"><img src="./img/set-select.png"></li>
+            <li><img src="./img/set.png"></li>
+        </ul>
+    </div>
+
+    <!-- 中间框 -->
+    <div class="middle">
+        <!-- 会话中间框 -->
+        <div class="middle-child" id="session-middle">
+            <!-- 搜索框 -->
+            <div class="search" id="session-search">
+                <input type="text" placeholder="搜索会话">
+                <img src="./img/search.png">
+            </div>
+            <!-- 会话列表 -->
+            <ul class="session-list"></ul>
+        </div>
+        <!-- 好友中间框 -->
+        <div class="middle-child" id="friend-middle" style="display: none;">
+            <!-- 搜索框 -->
+            <div class="search" id="friend-search">
+                <input type="text" class="search-friend" placeholder="搜索好友">
+                <img src="./img/search.png" onclick="getSearchFriendList()">
+                <img class="add-friend" src="./img/add-friend.png" style="margin-left: 10px;">
+            </div>
+            <div class="friend-notice">好友通知</div>
+            <!-- 好友列表 -->
+            <ul class="friend-list"></ul>
+        </div>
+
+        <!-- 设置中间框 -->
+        <div class="middle-child" id="set-middle" style="display: none;">
+            <ul class="set-list">
+                <li>账号安全</li>
+                <li>修改头像</li>
+                <li>个人信息</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 右侧框 -->
+    <div class="right">
+        <!-- 会话聊天框 -->
+        <div class="session-right" style="display: none;">
+            <!-- 会话友方名 -->
+            <div class="right-session-username"></div>
+            <!-- 聊天记录显示框 -->
+            <div class="right-session-messages"></div>
+            <!-- 消息发送工具栏 -->
+            <div class="right-session-tab">
+                <img src="./img/file.png">
+            </div>
+            <!-- 消息输入框 -->
+            <textarea class="message-input"></textarea>
+            <!-- 发送按钮 -->
+            <div style="height: 3%; width: 100%; display: flex; justify-content: flex-end;flex-grow: 1;">
+                <button class="right-session-send">发送</button>
+            </div>
+        </div>
+
+        <!-- 好友信息框 -->
+        <div class="friend-right" style="display: none;">
+            <!-- 头像 -->
+            <img class="friend-right-head">
+            <!-- 账号和昵称 -->
+            <div class="friend-right-username"></div>
+            <!-- 电话号码 -->
+            <div class="friend-right-phone"></div>
+            <!-- 邮箱 -->
+            <div class="friend-right-email"></div>
+            <!-- 发送消息 -->
+            <button class="friend-right-send">发送消息</button>
+        </div>
+
+        <!-- 搜索用户添加框 -->
+        <div class="add-friend-right" style="display: none;">
+            <!-- 搜索框 -->
+            <div class="add-friend-search">
+                <input type="text" class="add-friend-input" placeholder="账号">
+                <img src="./img/search.png" onclick="getSearchUser()">
+            </div>
+            <ul class="add-friend-ul"></ul>
+        </div>
+
+        <!-- 好友通知框 -->
+        <ul class="friend-notice-right" style="display: none;"></ul>
+
+        <!-- 账号安全 -->
+        <div class="user-set-right" style="display: none;">
+            <button onclick="goUpdatePassword()">修改密码</button>
+            <button onclick="goUpdateEmail()">修改邮箱</button>
+            <button onclick="applyFreeze()">账号冻结</button>
+            <button onclick="applyCancel()">注销</button>
+        </div>
+
+        <!-- 修改头像框 -->
+        <div class="head-set-right" style="display: none;">
+            <!-- 头像 -->
+            <img class="head-set-right-head" src="./img/head.jpg"></img>
+            <!-- 选择图片 -->
+            <input type="file" class="update-head-file">
+            <!-- 确认提交 -->
+            <button onclick="updateHead()">确认修改</button>
+        </div>
+
+        <!-- 个人信息框 -->
+        <div class="man-right" style="display: none;">
+            <!-- 头像 -->
+            <img class="man-right-head" src="./img/head.jpg"></img>
+            <!-- 账号和昵称 -->
+            <div class="man-right-username"></div>
+            <!-- 电话 -->
+            <div class="man-right-phone"></div>
+            <!-- 邮箱 -->
+            <div class="man-right-email"></div>
+            <!-- 修改按钮 -->
+            <button class="man-password" onclick="manSet()">修改个人信息</button>
+        </div>
+
+        <!-- 修改密码 -->
+        <div class="user-set-password" style="display: none;">
+            <button class="set-return" onclick="setReturnUserRight()">返回</button>
+            <input type="password" class="set-password" placeholder="密码">
+            <input type="password" class="set-password2" placeholder="确认密码">
+            <!-- 提交按钮 -->
+            <button class="set-send" onclick="updatePassword()">提交</button>
+        </div>
+
+        <!-- 修改邮箱 -->
+        <div class="user-set-email" style="display: none;">
+            <button class="set-return" onclick="setReturnUserRight()">返回</button>
+            <input type="text" class="set-email" placeholder="邮箱">
+            <div class="set-verification">
+                <input type="text" class="set-verification-input" placeholder="验证码">
+                <button class="set-verification-button" onclick="getEmailCode()">获取验证码</button>
+            </div>
+            <!-- 提交按钮 -->
+            <button class="set-send" onclick="updateEmail()">提交</button>
+        </div>
+
+        <!-- 修改个人信息框 -->
+        <div class="man-set-right" style="display: none;">
+            <button class="set-return" onclick="setReturnManRight()">返回</button>
+            <input type="text" class="set-nickname" placeholder="昵称(可不填)">
+            <input type="text" class="set-phone" placeholder="手机号码(可不填)">
+            <!-- 提交按钮 -->
+            <button class="set-send" onclick="updateMan()">提交</button>
+        </div>
+    </div>
+</div>
+<!-- 引入js -->
+<script src="./js/jquery.min.js"></script>
+<script src="js/clientUser.js"></script>
+</body>
+</html>

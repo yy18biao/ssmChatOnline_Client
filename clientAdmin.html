@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/clientAdmin.css">
+    <title>管理</title>
+</head>
+<body>
+<div class="logo">chatOnline管理员界面</div>
+<div class="main">
+    <div class="menu">
+        <p></p>
+        <button onclick="switchUser()" style="background-color: rgb(18, 150, 219)">普通用户管理</button>
+        <button onclick="switchAdmin()">个人信息</button>
+    </div>
+    <div class="center">
+        <div class="updateUser" style="display: none;">
+            <button class="set-return" onclick="switchUser()">返回</button>
+            <input type="text" class="Uusername" placeholder="账号">
+            <input type="text" class="Unickname" placeholder="昵称">
+            <input type="text" class="Uemail" placeholder="邮箱">
+            <input type="password" class="Upassword" placeholder="密码">
+            <input type="password" class="Upassword2" placeholder="确认密码">
+            <input type="text" class="Uphone" placeholder="手机号码">
+            <button class="add-button" onclick="updateUser()">修改</button>
+        </div>
+
+        <div class="userCenter">
+            <div class="userCenterTab">
+                <button onclick="switchNormal()" style="background-color: rgb(18, 150, 219)">正常状态用户</button>
+                <button onclick="switchFreeze()">冻结状态用户</button>
+                <button onclick="switchFreezeApply()">冻结申请</button>
+                <button onclick="switchCancelApply()">注销申请</button>
+                <button onclick="switchAddUser()">新增用户</button>
+            </div>
+            <li class="userTab">
+                <div></div>
+                <p>昵称</p>
+                <p>账号</p>
+                <p>邮箱</p>
+                <p>操作</p>
+            </li>
+            <ul class="normal ul"></ul>
+
+            <ul class="freeze ul" style="display: none"></ul>
+
+            <ul class="freezeApply ul" style="display: none"></ul>
+
+            <ul class="cancelApply ul" style="display: none"></ul>
+
+            <div class="addUser" style="display: none;">
+                <input type="text" class="username" id="username" placeholder="账号">
+                <input type="text" class="nickname" id="nickname" placeholder="昵称">
+                <input type="text" class="email" id="email" placeholder="邮箱">
+                <input type="password" class="password" id="passsword" placeholder="密码">
+                <input type="password" class="password2" id="passsword2" placeholder="确认密码">
+                <input type="text" class="phone" id="phone" placeholder="手机号码">
+                <button class="add-button" onclick="addUserInfo()">添加</button>
+            </div>
+        </div>
+
+        <div class="adminCenter" style="display: none">
+
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/clientAdmin.js"></script>
+</body>
+</html>

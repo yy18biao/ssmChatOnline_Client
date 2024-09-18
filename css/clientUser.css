@@ -1,0 +1,723 @@
+.main {
+    background-color: blanchedalmond;
+    width: 63%;
+    height: 90%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-style: solid;
+    border-width: 3px;
+    border-color: aliceblue;
+}
+
+.left {
+    background-color: rgb(199, 223, 246);
+    height: 100%;
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    background-color: white;
+    height: 100%;
+    width: 25%;
+}
+
+.right {
+    background-color: rgb(242, 242, 242);
+    height: 100%;
+    width: 67%;
+}
+
+.head {
+    margin-top: 10px;
+    width: 90%;
+    height: 10%;
+    background-image: url("https://biao22.oss-cn-guangzhou.aliyuncs.com/head.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.left .tab-list {
+    margin-top: 10px;
+    width: 100%;
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left .tab-list li {
+    margin-top: 10px;
+    width: 40%;
+    height: 10%;
+    border-radius: 50%;
+    overflow: auto;
+}
+
+.left .tab-list li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.left .tab-list li:active {
+    background-color: rgb(18, 150, 219);
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.middle-child {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    margin-top: 10%;
+    height: 5%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.search input {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    border-style: none;
+}
+
+.search img {
+    width: 20%;
+    height: 100%;
+    margin-right: auto;
+}
+
+.session-list {
+    margin-top: 30px;
+    width: 100%;
+    height: calc(75% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.session-list li {
+    margin-top: 10px;
+    width: 100%;
+    height: 10%;
+    overflow: auto;
+    display: flex;
+}
+
+.middle .middle-child .session-list li img {
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 20%;
+    height: 75%;
+    border-radius: 50%;
+}
+
+.session-list li .user{
+    margin-left: 3%;
+    height: 100%;
+    width: 57%;
+}
+
+.session-list li .nickname {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+}
+
+.session-list li .message {
+    width: 100%;
+    height: 50%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    color: grey;
+    text-align: left;
+}
+
+.time-prompt{
+    height: 100%;
+    flex-grow: 1;
+}
+
+.time{
+    margin-top: 10%;
+    height: 40%;
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+    color: grey;
+}
+
+.prompt {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.prompt p{
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: calc(100% - 10px);
+}
+
+.middle .middle-child .friend-notice {
+    margin-top: 10%;
+    height: 5%;
+    width: 90%;
+    margin-left: 10%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+}
+
+.middle .middle-child .friend-notice:active {
+    background-color: grey;
+}
+
+.middle .middle-child .friend-list {
+    margin-top: 10px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle .middle-child .friend-list li {
+    margin-top: 10px;
+    width: 100%;
+    height: 10%;
+    overflow: auto;
+    display: flex;
+    background-color: rgb(231,231,231);
+}
+
+.middle .middle-child .friend-list li img {
+    margin-left: 6%;
+    margin-top: 2%;
+    width: 20%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.middle .middle-child .friend-list li .username {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.middle .middle-child .set-list {
+    margin-top: 20%;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle .middle-child .set-list li {
+    margin-top: 10px;
+    width: 100%;
+    height: 5%;
+    overflow: auto;
+    border-bottom: solid;
+    text-align: center;
+}
+
+.middle .middle-child .set-list li:active {
+    background-color: rgb(18, 150, 219);
+}
+
+.session-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right .session-right .right-session-username {
+    margin-top: 5%;
+    margin-left: 1%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.right .session-right .right-session-messages {
+    width: 100%;
+    height: 65%;
+    overflow: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.right .session-right .right-session-messages .message-left {
+    margin-top: 5px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.right .session-right .right-session-messages .message-left img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.right .session-right .right-session-messages .message-left div {
+    margin-left: 5px;
+    width: 70%;
+    display: block;
+}
+
+.right .session-right .right-session-messages .message-left div h4 {
+    font-weight: normal;
+}
+
+.right .session-right .right-session-messages .message-left div div {
+    border-radius: 2px;
+    background-color: #fff;
+    width: fit-content;
+}
+
+.right .session-right .right-session-messages .message-right {
+    justify-content: flex-end;
+    margin-top: 5px;
+    display: flex;
+}
+
+.right .session-right .right-session-messages .message-right img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.right .session-right .right-session-messages .message-right div {
+    margin-left: 5px;
+    width: 70%;
+    display: block;
+}
+
+.right .session-right .right-session-messages .message-right div h4 {
+    font-weight: normal;
+    text-align: right;
+}
+
+.right .session-right .right-session-messages .message-right div div {
+    margin-top: 2px;
+    border-radius: 2px;
+    background-color: rgb(0, 153, 255);
+    width: fit-content;
+    float: right;
+    color: white;
+}
+
+.right .session-right .right-session-tab {
+    height: 4%;
+    width: 100%;
+    display: flex;
+}
+
+.right .session-right .right-session-tab img {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.right .session-right .right-session-tab img:active {
+    background-color: #ccc;
+}
+
+.right .session-right .message-input {
+    display: block;
+    height: 20%;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    border: none;
+    resize: none;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+}
+
+.right-session-send {
+    height: 100%;
+    width: 15%;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    border: none;
+}
+
+.right-session-send:active {
+    background-color: blue;
+}
+
+.friend-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friend-right-head {
+    margin-top: calc(50% - 100px);
+    height: 100px;
+    width: 100px;
+    background-image: url("https://biao22.oss-cn-guangzhou.aliyuncs.com/waiting.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.friend-right-phone {
+    margin-top: 20px;
+}
+
+.friend-right-email {
+    margin-top: 20px;
+}
+
+.friend-right button {
+    margin-top: 20px;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(0, 141, 235);
+    color: white;
+    border: none;
+}
+
+.friend-right button:active {
+    background-color: aqua;
+}
+
+.add-friend-right {
+    height: 100%;
+    width: 100%;
+}
+
+.add-friend-search {
+    margin-top: 5%;
+    width: 30%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    display: flex;
+}
+
+.add-friend-search input {
+    height: 100%;
+}
+
+.add-friend-right ul {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-friend-right li {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 10%;
+    overflow: auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.add-friend-right li img {
+    margin-left: 6%;
+    width: 12%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.add-friend-right li .username {
+    margin-left: 5%;
+    width: 56%;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.add-friend-right li button {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+    width: 20%;
+    background-color: rgb(199, 223, 246);
+}
+
+.friend-notice-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-notice-right li {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 10%;
+    overflow: auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.friend-notice-right li img {
+    margin-left: 6%;
+    width: 12%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.friend-notice-right li .username {
+    margin-left: 1%;
+    width: 70%;
+    font-size: 15px;
+}
+
+.friend-notice-right li .text {
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: flex-end;
+    font-size: 15px;
+    color: #ccc;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.friend-notice-right li .buttonTwo {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+    width: 21%;
+}
+
+.friend-notice-right li .buttonTwo .button1 {
+    height: 100%;
+    width: 45%;
+    background-color: rgb(199, 223, 246);
+}
+
+.friend-notice-right li .buttonTwo .button1:active {
+    background-color: rgb(0, 141, 235);
+}
+
+.friend-notice-right li .buttonTwo .button2 {
+    height: 100%;
+    width: 45%;
+    background-color: rgb(246, 205, 199);
+}
+
+.friend-notice-right li .buttonTwo .button2:active {
+    background-color: rgb(0, 141, 235);
+}
+
+.right .user-set-right{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .user-set-right button{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 141, 235);
+    color: white;
+    border: none;
+}
+.right .user-set-right button:active {
+    background-color: rgb(246, 205, 199);
+}
+
+.user-set-email{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.user-set-password{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-set-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right .head-set-right .head-set-right-head {
+    margin-top: calc(50% - 100px);
+    height: 100px;
+    width: 100px;
+}
+
+.right .head-set-right input {
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+.right .head-set-right button {
+    margin-top: 20px;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(0, 141, 235);
+    color: white;
+    border: none;
+}
+
+.right .head-set-right button:active {
+    background-color: aqua;
+}
+
+.right .man-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right .man-right img {
+    margin-top: calc(50% - 100px);
+    height: 100px;
+    width: 100px;
+}
+
+.right .man-right div {
+    margin-top: 20px;
+}
+
+.right .man-right button {
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 141, 235);
+    color: white;
+    border: none;
+}
+
+.man-set-right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.set-return {
+    border: none;
+    width: 10%;
+    font-size: 15px;
+}
+.set-nickname {
+    margin-top: 10%;
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-email {
+    margin-top: 10px;
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-password {
+    margin-top: 10px;
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-password2 {
+    margin-top: 10px;
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-verification {
+    margin-top: 10px;
+    height: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.set-verification-input {
+    height: 100%;
+    width: 68%;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-verification-button {
+    height: 100%;
+    width: 30%;
+    background-color: rgb(241, 242, 246);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-phone {
+    margin-top: 10px;
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+.set-send {
+    margin-top: 10px;
+    background-color: rgb(24, 144, 255);
+    color: white;
+    height: 4%;
+    width: 60%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+}
